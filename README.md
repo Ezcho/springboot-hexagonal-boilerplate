@@ -167,8 +167,8 @@ vi src/main/resources/application.properties
 
 ---
 
-## 👤 만든 사람
-### 조동영(Ezcho): Seoultech, Computer Science, Seoul, Republic of Korea
+## 👤 Developer
+#### 조동영(Ezcho): Seoultech, Computer Science, Seoul, Republic of Korea
 
 Hexagonal Architecture 기반의 클린하고 유지보수 쉬운 Spring Boot 구조를 추구하며,  
 실용적인 템플릿을 통해 팀과 개인 모두에게 도움이 되고자 이 프로젝트를 개발하였습니다.
