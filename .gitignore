@@ -1,0 +1,106 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle-cache/
+.gradle/
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+out/
+
+### Eclipse (혹시라도 쓸 경우) ###
+*.classpath
+*.project
+*.settings/
+
+### Mac OS ###
+.DS_Store
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+### Logs ###
+*.log
+logs/
+*.pid
+
+### Test Reports ###
+test-output/
+surefire-reports/
+target/
+
+### Spring Boot ###
+/target/
+/bin/
+/tmp/
+/hs_err_pid*.log
+
+### Environment ###
+.env
+*.env
+
+### 기타 ###
+*.swp
+*.swo
+*.orig
+
+### VSCode ###
+.vscode/
+
+### Coverage / Reports ###
+coverage/
+jacoco.exec
+*.exec
+*.coverage
+
+### Git ###
+*.orig
+
+# Ignore local application.yml override
+application-local.yml
+application-dev.yml
+application-prod.yml
+
+# macOS 시스템 파일
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Spotlight
+.Spotlight-V100
+
+# Trash
+.Trashes
+
+# macOS 리소스 포크 및 임시파일
+Icon?
+ehthumbs.db
+Desktop.ini
+
+# 응용 프로그램 상태 저장 정보
+*.swp
+*.swo
+
+# iCloud 동기화 관련
+.DS_Store?
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.TemporaryItems/
+.apdisk
+
