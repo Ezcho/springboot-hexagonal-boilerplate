@@ -1,42 +1,179 @@
-# hex-user
-User service based on hexagonal architecture
+# 🧱 헥사고날 아키텍처 - Spring Boot 보일러플레이트
 
-## SpringBoot에서 사용되는 Hexagonal Architecture 기반 유저관리 보일러 플레이트
-**Hexagonal Architecture 기반 유저 관리 시스템**
-
-> 도메인 순수성과 계층 간 분리를 강조한 구조적 백엔드 설계 예제입니다.  
-> 유저 등록, 조회 등의 기본 기능을 바탕으로 도메인 주도 설계 감각을 훈련할 수 있습니다.
-
-
-## 🚀 주요 기능
-
-- 회원 등록 (이메일 + 비밀번호)
-- 회원 목록 조회
-- 비밀번호 유효성 정책 (길이, 조합, 특수문자 등)
-- 글로벌 예외 처리 (`@RestControllerAdvice`)
-- 계층 간 의존성 분리 (Hexagonal 구조 기반)
+> 이 프로젝트는 Hexagonal Architecture (포트 & 어댑터 구조)를 기반으로 설계된 Spring Boot 백엔드 템플릿입니다.  
+> **도메인 주도 설계(DDD)**, **관심사의 분리**, **테스트 용이성**을 중심으로, 확장 가능하고 유지보수가 쉬운 구조를 제공합니다.
 
 ---
 
-## 🔧 기술 스택
+## ✨ 주요 특징
 
-- Java 17
-- Spring Boot 3.x
-- Gradle
-- JPA (Hibernate)
-- MySQL
-- Lombok
-- Validation API (JSR 380)
-- (선택) SpringDoc OpenAPI
+- ✅ 도메인 로직과 어댑터 간 **명확한 아키텍처 경계**
+- ✅ **REST API**, **JWT 인증**, **JPA 기반 DB 연동** 등 기능 확장에 용이
+- ✅ **작은 규모의 프로젝트부터 엔터프라이즈 환경까지** 적용 가능
+
+
+
+# 🧱 Hexagonal Architecture - Spring Boot Boilerplate
+
+> A lightweight, extensible template for building clean, testable Spring Boot applications based on **Hexagonal (Ports & Adapters) Architecture**.
 
 ---
 
-## 🔒 비밀번호 정책
+## 📐 Overview
 
-- 길이: 8~16자
-- 영문 대문자, 소문자, 숫자, 특수문자 **각 1자 이상 포함**
-- 공백 문자 불가
-- (추후 연속 문자 제한, 금지 단어 포함 금지 등 확장 가능)
+This repository provides a foundational structure for backend applications with strong architectural boundaries.
+
+✅ Designed for **clarity**, **testability**, and **separation of concerns**  
+✅ Easily extendable to support REST APIs, JWT authentication, database interaction, etc.  
+✅ Ideal for teams adopting **DDD** or **clean architecture** principles
+
+---
+
+## 📁 Project Structure
+
+```plaintext
+src
+└── main
+    ├── java
+    │   └── com.seouitech.user
+    │       ├── adapter
+    │       │   ├── in
+    │       │   │   ├── config
+    │       │   │   │   ├── SecurityConfig
+    │       │   │   │   └── WebConfig
+    │       │   │   ├── security
+    │       │   │   │   └── JwtAuthenticationFilter
+    │       │   │   └── web
+    │       │   │       ├── controller
+    │       │   │       │   ├── AuthController
+    │       │   │       │   └── MemberController
+    │       │   │       ├── dto
+    │       │   │       │   ├── request
+    │       │   │       │   └── response
+    │       │   │       ├── handler
+    │       │   │       │   ├── ErrorResponse
+    │       │   │       │   └── GlobalExceptionHandler
+    │       │   │       └── resolver
+    │       │   │           ├── CurrentUserEmail
+    │       │   │           └── CurrentUserEmailResolver
+    │       │   └── out
+    │       │       ├── exception
+    │       │       │   └── InvalidTokenException
+    │       │       ├── persistence
+    │       │       │   ├── MemberJpaEntity
+    │       │       │   ├── MemberJpaRepository
+    │       │       │   └── MemberRepositoryAdapter
+    │       │       └── security
+    │       │           └── JwtProvider
+    │       └── config
+    │           └── BeanConfig
+    └── domain
+        ├── exceptions
+        │   └── MemberNotFoundException
+        ├── model
+        │   ├── Member
+        │   └── TokenBundle
+        ├── port
+        │   ├── in
+        │   │   ├── AuthUseCase
+        │   │   └── MemberUseCase
+        │   └── out
+        │       ├── JwtPort
+        │       └── MemberRepository
+        ├── service
+        │   ├── command
+        │   │   ├── CreateMemberCommand
+        │   │   └── LoginCommand
+        │   ├── policy
+        │   │   └── PasswordPolicy
+        │   ├── AuthService
+        │   └── MemberService
+        └── UserApplication
+resources
+├── static
+├── templates
+└── application.properties
+```
 
 
+## 🧱 Architecture
 
+This project follows the **Hexagonal (Clean) Architecture**:
+
+
+## 🛠 Tech Stack
+
+- **Spring Boot 3.x.x**
+- **Spring Security 6.x**
+- **JPA (Hibernate)**
+- **JWT (io.jsonwebtoken)**
+- **Hexagonal Architecture**
+- **Lombok**
+- **Gradle**
+
+
+## ✨ Features
+
+- [x] 회원가입 및 로그인 (`/api/v1/auth`)
+- [x] 간단한 유저 기능 (`/api/v1/members`)
+- [x] JWT Access + Refresh 토큰 발급
+- [x] JWT 기반 인증 필터
+- [x] `@CurrentUserEmail` 커스텀 어노테이션으로 유저식별
+- [x] 예외 처리: GlobalExceptionHandler
+- [x] 도메인 중심 설계 및 예외 정의
+- [x] `.gitignore`, `.properties`, 프로젝트 분리 구조
+
+
+## 🛠️ Sample application.properties
+```
+# 📛 애플리케이션 이름
+spring.application.name=hex-user
+
+# 🗄️ 데이터베이스 연결 설정
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/your-db
+spring.datasource.username=root
+spring.datasource.password=your-password
+
+# 🛠️ JPA Setting
+spring.jpa.hibernate.ddl-auto=update         
+spring.jpa.show-sql=true                    
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.show_sql=true
+
+# 🧪 Spring Security Log Level(Optional)
+logging.level.org.springframework.security=TRACE
+
+# 🔐 JWT Setting
+jwt.access-secret=YOUR_SECRET_ACCESS_KEY
+jwt.refresh-secret=YOUR_SECRET_REFRESH_KEY
+jwt.access-expiration-ms=86400000           
+jwt.refresh-expiration-ms=604800000
+```
+## 🚀 Getting Started
+
+```bash
+# Clone the project
+git clone https://github.com/Ezcho/hex-user.git
+
+# Fill in secret keys in application.properties
+vi src/main/resources/application.properties
+
+# Build & run
+./gradlew build
+
+
+---
+
+## 👤 만든 사람
+
+| 이름 | 소개 |
+|------|------|
+| 조동영 (Ezcho) |  
+Hexagonal Architecture 기반의 클린하고 유지보수 쉬운 Spring Boot 구조를 추구하며,  
+실용적인 템플릿을 통해 팀과 개인 모두에게 도움이 되고자 이 프로젝트를 개발하였습니다.
+누구나 자유롭게 포크하거나 개선해주시길 환영합니다
+
+> 📬 이메일: ezcho.dev@gmail.com  
+> 💼 GitHub: [@ezcho](https://github.com/ezcho)  
+> 🧭 관심 분야: 백엔드 아키텍처, DDD, 클린 아키텍처, 시스템 설계
