@@ -48,8 +48,8 @@ src
     │       │   │       │   ├── AuthController
     │       │   │       │   └── MemberController
     │       │   │       ├── dto
-    │       │   │       │   ├── request
-    │       │   │       │   └── response
+    │       │   │       │   ├── request //Some dtos using http request
+    │       │   │       │   └── response //Some dtos using http response
     │       │   │       ├── handler
     │       │   │       │   ├── ErrorResponse
     │       │   │       │   └── GlobalExceptionHandler
