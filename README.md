@@ -161,7 +161,7 @@ vi src/main/resources/application.properties
 
 # Build & run
 ./gradlew build
-
+```
 
 ---
 
