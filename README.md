@@ -12,6 +12,7 @@ This repository provides a foundational structure for backend applications with 
 ✅ Designed for **clarity**, **testability**, and **separation of concerns**  
 ✅ Easily extendable to support REST APIs, JWT authentication, database interaction, etc.  
 ✅ Ideal for teams adopting **DDD** or **clean architecture** principles
+
 ---
 
 # 🧱 헥사고날 아키텍처 - Spring Boot 보일러플레이트
@@ -27,7 +28,7 @@ This repository provides a foundational structure for backend applications with 
 - ✅ **REST API**, **JWT 인증**, **JPA 기반 DB 연동** 등 기능 확장에 용이
 - ✅ **작은 규모의 프로젝트부터 엔터프라이즈 환경까지** 적용 가능
 
-
+---
 
 
 ## 📁 Project Structure
