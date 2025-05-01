@@ -1,3 +1,19 @@
+
+# 🧱 Hexagonal Architecture - Spring Boot Boilerplate
+
+> A lightweight, extensible template for building clean, testable Spring Boot applications based on **Hexagonal (Ports & Adapters) Architecture**.
+
+---
+
+## 📐 Overview
+
+This repository provides a foundational structure for backend applications with strong architectural boundaries.
+
+✅ Designed for **clarity**, **testability**, and **separation of concerns**  
+✅ Easily extendable to support REST APIs, JWT authentication, database interaction, etc.  
+✅ Ideal for teams adopting **DDD** or **clean architecture** principles
+---
+
 # 🧱 헥사고날 아키텍처 - Spring Boot 보일러플레이트
 
 > 이 프로젝트는 Hexagonal Architecture (포트 & 어댑터 구조)를 기반으로 설계된 Spring Boot 백엔드 템플릿입니다.  
@@ -13,21 +29,6 @@
 
 
 
-# 🧱 Hexagonal Architecture - Spring Boot Boilerplate
-
-> A lightweight, extensible template for building clean, testable Spring Boot applications based on **Hexagonal (Ports & Adapters) Architecture**.
-
----
-
-## 📐 Overview
-
-This repository provides a foundational structure for backend applications with strong architectural boundaries.
-
-✅ Designed for **clarity**, **testability**, and **separation of concerns**  
-✅ Easily extendable to support REST APIs, JWT authentication, database interaction, etc.  
-✅ Ideal for teams adopting **DDD** or **clean architecture** principles
-
----
 
 ## 📁 Project Structure
 
@@ -166,14 +167,10 @@ vi src/main/resources/application.properties
 ---
 
 ## 👤 만든 사람
-
-| 이름 | 소개 |
-|------|------|
-| 조동영 (Ezcho) |  
+조동영(Ezcho): Seoultech, Computer Science, Seoul, Republic of Korea
 Hexagonal Architecture 기반의 클린하고 유지보수 쉬운 Spring Boot 구조를 추구하며,  
 실용적인 템플릿을 통해 팀과 개인 모두에게 도움이 되고자 이 프로젝트를 개발하였습니다.
 누구나 자유롭게 포크하거나 개선해주시길 환영합니다
 
-> 📬 이메일: ezcho.dev@gmail.com  
+> 📬 이메일: ezcho886@naver.com  
 > 💼 GitHub: [@ezcho](https://github.com/ezcho)  
-> 🧭 관심 분야: 백엔드 아키텍처, DDD, 클린 아키텍처, 시스템 설계
