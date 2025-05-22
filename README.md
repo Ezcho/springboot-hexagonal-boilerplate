@@ -168,11 +168,11 @@ vi src/main/resources/application.properties
 ---
 
 ## 👤 Developer
-#### 조동영(Ezcho): Seoultech, Computer Science, Seoul, Republic of Korea
+#### 조동영(Ezcho)
 
-Hexagonal Architecture 기반의 클린하고 유지보수 쉬운 Spring Boot 구조를 추구하며,  
+Hexagonal Architecture 기반의 클린하고 유지보수 쉬운 Spring Boot 구조 
 실용적인 템플릿을 통해 팀과 개인 모두에게 도움이 되고자 이 프로젝트를 개발하였습니다.
-누구나 자유롭게 포크하거나 개선해주시길 환영합니다.
+누구나 자유롭게 사용해주세요!
 
-> 📬 이메일: ezcho886@naver.com  
+> 📬 이메일: ezcho886@naver.com 
 > 💼 GitHub: [@ezcho](https://github.com/ezcho)  
