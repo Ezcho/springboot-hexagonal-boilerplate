@@ -16,7 +16,7 @@ build/
 .idea/
 *.iml
 *.iws
-out/
+
 
 ### Eclipse (혹시라도 쓸 경우) ###
 *.classpath
